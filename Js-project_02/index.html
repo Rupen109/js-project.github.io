@@ -5,12 +5,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/prism.css">
+    <script src="https://cdn.tailwindcss.com"></script>               
+    <script src="/prism.js"></script>
     <title>Timer</title>
 </head>
 <body>
-    <div class="change-layout">Change Layout</div>
+
+    <section class="text-gray-600 body-font">
+        <div class="px-5 py-24 ">
+          <div class="text-center mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-white mb-4">TIMER IN HTML,CSS AND JS</h1>
+            <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-white">Show below video and try that code in pen.</p>
+        </div>   
+          </div>      
+    </section>
+                     
+    <div class="proj-02"> 
+        <div class="left">
+            <pre class="language-html"> 
+    <code>html code
+
+        &lt;div class="wrapper"&gt;
+        &lt;p&gt; &lt;span id ="seconds"&gt;00&lt;/span&gt;::&lt;span id="tens"&gt;00&lt;/span&gt; &lt;/p&gt;
+        &lt;button id="button-start"&gt;Start &lt;/button&gt;
+        &lt;button id="button-stop"&gt;Stop  &lt;/button&gt;
+        &lt;button id="button-reset"&gt;Reset&lt;/button&gt;
+    &lt;/div&gt;        
+              </code></pre>
+        </div>
+
+        <div class="center"> 
+            <pre class="language-css">                    
+<code>Css Code
+
+    body{
+        background: #e4e4e4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    
+        overflow: hidden;
+    }
+    
+    .wrapper{
+        color: #fff;
+        background-color: #171717;
+        text-align: center;
+        /* width: 200px; */
+        /* height: 100px; */
+        padding: 20px;
+        border-radius: 10px;
+        letter-spacing: 4px;
+    
+    }
+    
+    button{
+        background-color: rgb(173, 250, 95);
+        font-size: 16px;
+        border-radius: 6px;
+        height: 40px;
+        width: 140px;
+        cursor: pointer;
+        
+    }
+    button:hover{
+        background-color: transparent;
+        color: #fff;
+    }
+    
+   
+        </code></pre>
+        </div> 
+        <div class="right">
+        <pre class="language-javascript"> 
+    <code>javascript Code 
+
+const counter = document.getElementById("counter");
+const incre = document.getElementById("incre");
+const decre = document.getElementById("decre");
+
+let count=0;
+
+incre.addEventListener("click", () =>{
+   count++;
+   counter.innerText = count;
+});
+
+decre.addEventListener("click", () => {
+   count--;
+   counter.innerText = count;
+});        
+        </code></pre>
+        </div> 
+    </div>
+
+    <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+        <h1 class="sm:text-2xl text-2xl font-medium title-font my-6 text-white"> You Can Copy Above Code By Simply Click On Copy Button.</h1>
+        <div class="h-1 w-48  bg-indigo-500 rounded"></div> 
+      </div>
+    <div class="change-layout">Change Layout</div>      
     <div class="container view2">
-        <div class="coder view2">   
+        <div class="coder view2">
             <div class="code-editor htmlCoder">
                 <div class="code-type">HTML</div>
                 <div class="code html" id="html"></div>
@@ -28,9 +126,12 @@
             <iframe src="" class="virtual-iframe" frameborder="0"></iframe>
         </div>
     </div>
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
     <script src="./static/js/app.js"></script>
 
     <script src="proj-02.js"></script>
 </body>
-</html>
+</html> 

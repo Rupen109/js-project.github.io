@@ -1,5 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+.language-html{
+    max-height: 450px;
+    max-width: 485px;
+    border-radius: 10px;
+    /* color: #ffffff; */
+    background-color: #ffffff;
+  }
+           
+.language-css{
+    max-height: 450px;
+    max-width: 485px;
+    border-radius: 10px;  
+    /* color: #ffffff; */
+    background-color: #ffffff;
+}  
+                           
+.language-javascript{
+    max-height: 450px;
+    max-width: 485px;
+    border-radius: 10px;
+    /* color: #ffffff; */
+    background-color: #ffffff;
+}
+
+.proj-02{
+    display: flex;
+    flex-direction: row;
+    
+} 
+
+.left{
+    padding: 6px;
+    padding-left: 20px; 
+}
+
+.center{
+    padding: 6px;
+}
+
+.right{
+    padding: 6px;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +51,7 @@
 }
 
 body {
-    background-color: #333642;
+    background-color: #000000;
 }
 
 .container {

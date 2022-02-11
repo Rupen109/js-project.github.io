@@ -1,22 +1,6 @@
- <pre class="language-html"> <code>
-            &lt;nav&gt;
-             &lt;ul&gt;
-              &lt;li&gt;
-            home
-               &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-            products
-               &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
-               &lt;/li&gt;
-               &lt;li&gt;
-           services
-               &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
-               &lt;/li&gt;
-               &lt;li&gt;
-           contact
-               &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
-               &lt;/li&gt;
-               &lt;/ul&gt;
-               &lt;/nav&gt;        
-                      </code></pre>
+&lt;div class="wrapper"&gt;
+       &lt;p&gt; &lt;span id ="seconds"&gt;00&lt;/span&gt;::&lt;span id="tens"&gt;00&lt;/span&gt; &lt;/p&gt;
+       &lt;button id="button-start"&gt;Start &lt;/button&gt;
+       &lt;button id="button-stop"&gt;Stop  &lt;/button&gt;
+       &lt;button id="button-reset"&gt;Reset&lt;/button&gt;
+   &lt;/div&gt;

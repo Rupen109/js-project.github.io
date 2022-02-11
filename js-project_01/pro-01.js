@@ -115,5 +115,5 @@ window.onload = function () {
                 jsEditor.resize();
                 break;
         }
-    }
+    } 
 }

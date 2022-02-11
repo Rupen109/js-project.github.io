@@ -1,5 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.language-html{
+    max-height: 450px;
+    max-width: 485px;
+    border-radius: 10px;
+    /* color: #ffffff; */
+    background-color: #ffffff;
+  }
 
+.language-css{
+    max-height: 450px;
+    max-width: 485px;
+    border-radius: 10px; 
+    /* color: #ffffff; */
+    background-color: #ffffff;
+}  
+
+.language-javascript{
+    max-height: 450px;
+    max-width: 485px;
+    border-radius: 10px;
+    /* color: #ffffff; */
+    background-color: #ffffff;
+}
+
+.proj-01{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.left{
+    padding: 6px;
+    padding-left: 20px;
+}
+
+.center{
+    padding: 6px;
+}
+
+.right{
+    padding: 6px;
+}
+
+
+  
 * {
     margin: 0;
     padding: 0;
@@ -80,7 +124,7 @@ body {
 }
 
 .output {
-    background-color: #ffffff;
+    background-color: #747171;
 }
 
 .virtual-iframe {
@@ -108,4 +152,13 @@ body {
 
 .change-layout:hover {
     background-color: #2d303a;
+}
+
+@media only screen and (max-width: 500px){
+     .proj-01{
+         display:flex;
+         flex-direction: column;
+         max-width: 350px;
+         margin-left: 24px;
+     }
 }

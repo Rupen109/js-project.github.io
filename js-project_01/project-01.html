@@ -6,11 +6,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodePen Clone</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/prism.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/prism.js"></script>
+    
+
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+ 
 
 </head>
-
 <body>
+
+    <section class="text-gray-600 body-font">
+        <div class="px-5 py-24 ">
+          <div class="text-center mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-white mb-4">COUNTER IN HTML,CSS AND JS</h1>
+            <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-white">Show below video and try that code in pen.</p>
+        </div>   
+          </div>      
+    </section>
+    <div class="proj-01">
+        <div class="left">
+            <pre class="language-html"> 
+    <code>html code
+
+        &lt;nav&gt;
+     &lt;ul&gt;
+      &lt;li&gt;
+    home 
+       &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+    products
+       &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
+       &lt;/li&gt;
+       &lt;li&gt;
+    services
+       &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
+       &lt;/li&gt;
+       &lt;li&gt;
+    contact
+       &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
+       &lt;/li&gt;
+       &lt;/ul&gt;   
+       &lt;/nav&gt;        
+              </code></pre>
+        </div>
+
+        <div class="center"> 
+            <pre class="language-css"> 
+<code>Css Code
+
+    *{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+   width: 200px;
+   height: 200px;
+   justify-items: center;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   margin: 15rem 40rem;
+   background: linear-gradient(45deg, #2193b0, #6dd5ed);
+   flex-direction: column;
+   color: white;
+}
+
+#incre, #decre{
+    border-radius: 50%;
+    font-size: 20px;
+    position: absolute;
+    right: -8px;
+    bottom: 17px;
+    height: 30px;
+    width: 30px;
+  
+}
+
+#decre{
+    bottom: -13px;
+    right: 18px;
+}     
+        </code></pre>
+        </div> 
+        <div class="right">
+        <pre class="language-javascript"> 
+    <code>javascript Code 
+
+const counter = document.getElementById("counter");
+const incre = document.getElementById("incre");
+const decre = document.getElementById("decre");
+
+let count=0;
+
+incre.addEventListener("click", () =>{
+   count++;
+   counter.innerText = count;
+});
+
+decre.addEventListener("click", () => {
+   count--;
+   counter.innerText = count;
+});        
+        </code></pre>
+        </div> 
+    </div>
+
+    <div class="">
+        
+    </div>
+  
     <div class="change-layout">Change Layout</div>
     <div class="container view2">
         <div class="coder view2">
@@ -35,5 +146,4 @@
     <script src="pro-01.js"></script>
 </body>
 
-</html>
-
+</html>  

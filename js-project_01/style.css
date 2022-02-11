@@ -124,12 +124,12 @@ body {
 }
 
 .output {
-    background-color: #747171;
+    background-color: #f0eeee;
 }
 
 .virtual-iframe {
     height: 100%;
-    width: 100%;
+    width: 100%; 
 }
 
 .change-layout {

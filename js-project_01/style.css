@@ -161,4 +161,12 @@ body {
          max-width: 350px;
          margin-left: 24px;
      }
+
+     .container.view2{
+         display: none;
+     }
+
+     .output{
+         display: none;
+     }
 }  

@@ -83,21 +83,58 @@
         <pre class="language-javascript"> 
     <code>javascript Code 
 
-const counter = document.getElementById("counter");
-const incre = document.getElementById("incre");
-const decre = document.getElementById("decre");
-
-let count=0;
-
-incre.addEventListener("click", () =>{
-   count++;
-   counter.innerText = count;
-});
-
-decre.addEventListener("click", () => {
-   count--;
-   counter.innerText = count;
-});        
+        window.onload = function () {
+            var seconds = 00;
+            var tens = 00;
+            var appendTens = document.getElementById("tens");
+            var appendSeconds = document.getElementById("seconds");
+            var buttonStart = document.getElementById("button-start");
+            var buttonStop = document.getElementById("button-stop");
+            var buttonReset = document.getElementById("button-reset");
+            var Interval;
+          
+            buttonStart.onclick = function () {
+              clearInterval(Interval);
+              Interval = setInterval(startTimer);
+            };
+          
+            buttonStop.onclick = function () {
+              clearInterval(Interval);
+            };
+          
+            buttonReset.onclick = function () {
+              clearInterval(Interval);
+              tens = "00";
+              seconds = "00";
+              appendTens.innerHTML = tens;
+              appendSeconds.innerHTML = seconds;
+            };
+          
+            function startTimer() {
+              tens++;
+          
+              if (tens &lt= 9) {
+                appendTens.innerHTML = "0" + tens;
+              }
+          
+              if (tens > 9) {
+                appendTens.innerHTML = tens;
+              }
+          
+              if (tens > 99) {
+                console.log("seconds");
+                seconds++;
+                appendSeconds.innerHTML = "0" + seconds;
+                tens = 0;
+                appendTens.innerHTML = "0" + 0;
+              }
+          
+              if (seconds > 9) {
+                appendSeconds.innerHTML = seconds;
+              }
+            }
+          };
+             
         </code></pre>
         </div> 
     </div>
@@ -106,6 +143,7 @@ decre.addEventListener("click", () => {
         <h1 class="sm:text-2xl text-2xl font-medium title-font my-6 text-white"> You Can Copy Above Code By Simply Click On Copy Button.</h1>
         <div class="h-1 w-48  bg-indigo-500 rounded"></div> 
       </div>
+      
     <div class="change-layout">Change Layout</div>      
     <div class="container view2">
         <div class="coder view2">

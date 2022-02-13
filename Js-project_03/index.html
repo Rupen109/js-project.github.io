@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resp Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="prism.css">
+    <script src="https://cdn.tailwindcss.com"></script>               
+    <script src="prism.js"></script>
+</head>
+<body>
+
+    <section class="text-gray-600 body-font">
+        <div class="px-5 py-24 ">
+          <div class="text-center mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-white mb-4">RESPONSIVE NAVBAR IN HTML,CSS AND JS</h1>
+            <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-white">Show below video and try that code in pen.</p>
+        </div>   
+          </div>      
+
+          <div class="proj-03"> 
+            <div class="left">
+                <pre class="language-html"> 
+        <code>html code
+    
+            &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+
+            &lt;div class="navbar" id="navs"&gt;
+        &lt;a href="" class="active"&gt;Home&lt;/a&gt;
+        &lt;a href="" &gt;news&lt;/a&gt;
+        &lt;a href=""&gt;contact&lt;/a&gt;
+        &lt;a href=""&gt;about us&lt;/a&gt;
+        &lt;a href="javascript:void(0);" class="icon" onclick="myFunction()"&gt;
+        &lt;i class="fa fa-bars"&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;/div&gt;        
+                  </code></pre>
+            </div>
+    
+            <div class="center"> 
+                <pre class="language-css">                    
+    <code>Css Code
+    
+        *{
+            margin: 0;
+        }
+        
+        .navbar{
+            background-color: #333;
+            overflow: hidden;
+        }
+        
+        .navbar a{
+            float: left;
+          display: flex;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        
+        .navbar a:hover{
+            background-color: aqua;
+            color: #333;
+        }
+        
+        .navbar .active{
+            background-color: aqua;
+            color: #333;
+        }
+        
+        .navbar .icon{
+            display: none;
+        }
+        
+        @media screen and (max-width:600px) {
+            .navbar a:not(:first-child){
+                display: none;
+            }
+            .navbar a.icon{
+                display: block;
+                float: right;
+            }
+        }
+        
+        @media screen and (max-width:600px){
+            .navbar.responsive{
+                position: relative;
+            }
+            .navbar.responsive a.icon{
+                position: absolute;
+                right: 0;
+                top: 0;
+        
+            }
+            .navbar.responsive a{
+                float: none;
+                display: block;
+            }
+        }
+        
+       
+            </code></pre>
+            </div> 
+            <div class="right">
+            <pre class="language-javascript"> 
+        <code>javascript Code 
+    
+            function myFunction() 
+            {
+                var x = document.getElementById("navs");
+                if (x.className === "navbar") 
+                {
+                  x.className  += " responsive";
+                } 
+                else 
+                {
+                  x.className = "navbar";
+                }
+            }        
+            </code></pre>
+            </div> 
+        </div>
+    </section>
+    
+    <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+        <h1 class="sm:text-2xl text-2xl font-medium title-font my-6 text-white"> You Can Copy Above Code By Simply Click On Copy Button.</h1>
+        <div class="h-1 w-48  bg-indigo-500 rounded"></div> 
+      </div>
+
+    <div class="change-layout">Change Layout</div>      
+    <div class="container view2">
+        <div class="coder view2">
+            <div class="code-editor htmlCoder">
+                <div class="code-type">HTML</div>
+                <div class="code html" id="html"></div>
+            </div>
+            <div class="code-editor cssCoder">
+                <div class="code-type">CSS</div>
+                <div class="code css" id="css"></div>
+            </div>
+            <div class="code-editor jsCoder">
+                <div class="code-type">JS</div>
+                <div class="code js" id="javascript"></div>
+            </div>
+        </div>
+        <div class="output">
+            <iframe src="" class="virtual-iframe" frameborder="0"></iframe>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <script src="./static/js/app.js"></script>
+
+    <script src="proj-03.js"></script>
+
+</body>
+</html>

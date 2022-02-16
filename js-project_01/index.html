@@ -32,26 +32,14 @@
             <pre class="language-html"> 
     <code>html code
 
-        &lt;nav&gt;
-     &lt;ul&gt;
-      &lt;li&gt;
-    home 
-       &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-    products
-       &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
-       &lt;/li&gt;
-       &lt;li&gt;
-    services
-       &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
-       &lt;/li&gt;
-       &lt;li&gt;
-    contact
-       &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
-       &lt;/li&gt;
-       &lt;/ul&gt;   
-       &lt;/nav&gt;        
+        &lt;div class="container"&gt;
+        &lt;div id="newtask"&gt;        
+            &lt;input type="text" placeholder="Task To Be Done.."&gt;
+            &lt;button id="push"&gt;Add&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;div id="tasks-list"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src="to_do_list.js"&gt;&lt;/script&gt;        
               </code></pre>
         </div>
 
@@ -59,40 +47,128 @@
             <pre class="language-css"> 
 <code>Css Code
 
-    *{
-    margin: 0;
+    *,
+*:before,
+*:after{
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: #ecf5ff;
+    display: grid;  
+    justify-content: center;  
+    align-items: center; 
 }
 
 .container{
+    width: 40%;
+    min-width: 450px;
+    min-height: 100px;
+    background: white;
+    border-radius: 10px;
+}
+
+#newtask{
+    position: relative;
+    padding: 30px 20px;
+}
+#newtask input{
+    width: 75%;
+    height: 45px;
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    border: 2px solid #d1d3d4;
+    padding: 12px;
+    color: #111111;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+}
+
+#newtask input:focus{
+    outline: none;
+    /* background-color: red; */
+    border-color: #0d75ec;
+
+}
+
+#newtask button{
+    position: relative;
+    float: right;
+    width: 20%;
+    height: 45px;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #1a759f;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+}
+
+#tasks-list{
+    background-color: #ffffff;
+    padding: 30px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.task{
+   background-color: #c5e1e6;
+    height: 50px;
+    margin-bottom: 8px;
+    padding: 5px 10px;
     display: flex;
-   width: 200px;
-   height: 200px;
-   justify-items: center;
-   justify-content: center;
-   align-items: center;
-   position: relative;
-   margin: 15rem 40rem;
-   background: linear-gradient(45deg, #2193b0, #6dd5ed);
-   flex-direction: column;
-   color: white;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #939697;
+    cursor: pointer;
+}
+.task span{
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+.delete{
+    background-color: #1a759f;
+    color: #ffffff;
+    height: 100%;
+    width: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
 }
 
-#incre, #decre{
-    border-radius: 50%;
-    font-size: 20px;
-    position: absolute;
-    right: -8px;
-    bottom: 17px;
-    height: 30px;
-    width: 30px;
-  
+
+.task .custom-checkbox {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: white;
+  border: 1px solid #1a759f;
+  margin-right: 0.1em;
+  border-radius: 50%;
 }
 
-#decre{
-    bottom: -13px;
-    right: 18px;
-}     
+.task-completed .custom-checkbox {
+  background-color: #6a994e;
+
+}
+
+.task-completed .taskname {
+  text-decoration: line-through;
+  color: green;
+}
+     
         </code></pre>
         </div> 
         <div class="right">

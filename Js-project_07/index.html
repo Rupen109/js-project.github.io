@@ -1,0 +1,259 @@
+    bb<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="prism.css">
+    <script src="https://cdn.tailwindcss.com"></script>               
+    <script src="prism.js"></script>
+</head>
+<body>
+                                     
+    <section class="text-gray-600 body-font">           
+        <div class="px-5 py-24 ">
+          <div class="text-center mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-white mb-4">To-Do List USING HTML,CSS AND JS</h1>
+            <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-white">See below video and try that code in pen.</p>
+          </div>   
+        </div>      
+    </section>
+
+    <div class="proj-07"> 
+        <div class="left">
+            <pre class="language-html"> 
+    <code>html code
+
+        &lt;div class="quiz-container" id="quiz"&gt;  
+        &lt;div class="quiz-header"&gt;  
+         &lt;h2 id="question"&gt;Question is loading...&lt;/h2&gt;  
+         &lt;ul&gt;  
+          &lt;li&gt;  
+           &lt;input type="radio" name="answer" id="a" class="answer" /&gt;  
+           &lt;label for="a" id="a_text"&gt;Answer...&lt;/label&gt;  
+          &lt;/li&gt;  
+          &lt;li&gt;                                          
+           &lt;input type="radio" name="answer" id="b" class="answer" /&gt;  
+           &lt;label for="b" id="b_text"&gt;Answer...&lt;/label&gt;  
+          &lt;/li&gt;  
+          &lt;li&gt;  
+           &lt;input type="radio" name="answer" id="c" class="answer" /&gt;  
+           &lt;label for="c" id="c_text"&gt;Answer...&lt;/label&gt;  
+          &lt;/li&gt;  
+          &lt;li&gt;  
+           &lt;input type="radio" name="answer" id="d" class="answer" /&gt;  
+           &lt;label for="d" id="d_text"&gt;Answer...&lt;/label&gt;  
+          &lt;/li&gt;  
+         &lt;/ul&gt;  
+        &lt;/div&gt;  
+        &lt;button id="submit"&gt;Submit&lt;/button&gt;  
+       &lt;/div&gt;           
+              </code></pre>
+        </div>
+
+        <div class="center"> 
+            <pre class="language-css">                    
+<code>Css Code
+
+    *,
+    *:before,
+    *:after{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    body{
+        height: 100vh;
+        background: #ecf5ff;
+        display: grid;  
+        justify-content: center;  
+        align-items: center; 
+    }
+    
+    .container{
+        width: 40%;
+        min-width: 450px;
+        min-height: 100px;
+        background: white;
+        border-radius: 10px;
+    }
+    
+    #newtask{
+        position: relative;
+        padding: 30px 20px;
+    }
+    #newtask input{
+        width: 75%;
+        height: 45px;
+        font-family: 'Poppins',sans-serif;
+        font-size: 15px;
+        border: 2px solid #d1d3d4;
+        padding: 12px;
+        color: #111111;
+        font-weight: 500;
+        position: relative;
+        border-radius: 5px;
+    }
+    
+    #newtask input:focus{
+        outline: none;
+        /* background-color: red; */
+        border-color: #0d75ec;
+    
+    }
+    
+    #newtask button{
+        position: relative;
+        float: right;
+        width: 20%;
+        height: 45px;
+        border-radius: 5px;
+        font-family: 'Poppins',sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        background-color: #1a759f;
+        border: none;
+        color: #ffffff;
+        cursor: pointer;
+        outline: none;
+    }
+    
+    #tasks-list{
+        background-color: #ffffff;
+        padding: 30px 20px;
+        margin-top: 10px;
+        border-radius: 10px;
+        width: 100%;
+        position: relative;
+    }
+    
+    .task{
+       background-color: #c5e1e6;
+        height: 50px;
+        margin-bottom: 8px;
+        padding: 5px 10px;
+        display: flex;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #939697;
+        cursor: pointer;
+    }
+    .task span{
+        font-family: 'Poppins',sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .delete{
+        background-color: #1a759f;
+        color: #ffffff;
+        height: 100%;
+        width: 40px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        outline: none;
+    }
+    
+    
+    .task .custom-checkbox {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      background-color: white;
+      border: 1px solid #1a759f;
+      margin-right: 0.1em;
+      border-radius: 50%;
+    }
+    
+    .task-completed .custom-checkbox {
+      background-color: #6a994e;
+    
+    }
+    
+    .task-completed .taskname {
+      text-decoration: line-through;
+      color: green;
+    }       
+        </code></pre>
+        </div> 
+        <div class="right">
+            <pre class="language-javascript"> 
+        <code>javascript Code 
+        
+        
+            document.querySelector('#push').addEventListener('click', function() {
+                if(document.querySelector('#newtask input').value.length == 0){
+                      alert("Please Enter a Task");
+                  }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                  else{
+                    addTaskHandler();
+                    document.querySelector('#newtask input').value = "";
+                  }
+              })
+                                                                                                                                   
+              function addTaskHandler() {                    
+                document.querySelector('#tasks-list').innerHTML += `
+                          &lt;div class="task"&gt;                                                                                                                                                                                                                                                                                                             
+                              &lt;div&gt;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                              &lt;div class="custom-checkbox"&gt;&lt;/div&gt;
+                              &lt;span class="taskname"&gt;          
+                                  ${document.querySelector('#newtask input').value}  
+                              &lt;/span&gt;                                                         
+                              &lt;/div&gt;    
+                              &lt;button class="delete"&gt;
+                                  &lt;i class="far fa-trash-alt"&gt;&lt;/i&gt;
+                              &lt;/button&gt;
+                           &lt;/div&gt;   
+                      `;                            
+                                                  
+                      document.querySelectorAll(".delete")
+                        .forEach(task =&gt; task.addEventListener('click', function() {
+                              this.parentNode.remove();
+                          }));            
+                      
+                      document.querySelectorAll(".custom-checkbox")
+                        .forEach(task =&gt; task.addEventListener('click', function() {
+                            this.parentNode.classList.toggle("task-completed");
+                          }));
+                       
+              }
+                    
+                                           
+            </code></pre>
+            </div> 
+    </div> 
+    <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+        <h1 class="sm:text-2xl text-2xl font-medium title-font my-6 text-white"> You Can Copy Above Code By Simply Click On Copy Button.</h1>
+        <div class="h-1 w-48  bg-indigo-500 rounded"></div> 
+      </div>
+      <div class="change-layout">Change Layout</div>      
+      <div class="container view2">
+          <div class="coder view2">
+              <div class="code-editor htmlCoder">
+                  <div class="code-type">HTML</div>
+                  <div class="code html" id="html"></div>
+              </div>
+              <div class="code-editor cssCoder">
+                  <div class="code-type">CSS</div>
+                  <div class="code css" id="css"></div>
+              </div>
+              <div class="code-editor jsCoder">
+                  <div class="code-type">JS</div>
+                  <div class="code js" id="javascript"></div>
+              </div>
+          </div>
+          <div class="output">
+              <iframe src="" class="virtual-iframe" frameborder="0"></iframe>
+          </div>
+      </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+  <script src="./static/js/app.js"></script>
+
+  <script src="proj-07.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="prism.css">
+    <script src="https://cdn.tailwindcss.com"></script>               
+    <script src="prism.js"></script>
+</head>
+<body>
+    <section class="text-gray-600 body-font">
+        <div class="px-5 py-24 ">
+          <div class="text-center mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-white mb-4">QUIZ APP USING HTML,CSS AND JS</h1>
+            <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-white">Show below video and try that code in pen.</p>
+          </div>   
+        </div>      
+    </section>
+
+    <div class="proj-06"> 
+        <div class="left">
+            <pre class="language-html"> 
+    <code>html code
+
+        &lt;div class="quiz-container" id="quiz"&gt;  
+        &lt;div class="quiz-header"&gt;  
+         &lt;h2 id="question"&gt;Question is loading...&lt;/h2&gt;  
+         &lt;ul&gt;  
+          &lt;li&gt;  
+           &lt;input type="radio" name="answer" id="a" class="answer" /&gt;  
+           &lt;label for="a" id="a_text"&gt;Answer...&lt;/label&gt;  
+          &lt;/li&gt;  
+          &lt;li&gt;                                          
+           &lt;input type="radio" name="answer" id="b" class="answer" /&gt;  
+           &lt;label for="b" id="b_text"&gt;Answer...&lt;/label&gt;  
+          &lt;/li&gt;  
+          &lt;li&gt;  
+           &lt;input type="radio" name="answer" id="c" class="answer" /&gt;  
+           &lt;label for="c" id="c_text"&gt;Answer...&lt;/label&gt;  
+          &lt;/li&gt;  
+          &lt;li&gt;  
+           &lt;input type="radio" name="answer" id="d" class="answer" /&gt;  
+           &lt;label for="d" id="d_text"&gt;Answer...&lt;/label&gt;  
+          &lt;/li&gt;  
+         &lt;/ul&gt;  
+        &lt;/div&gt;  
+        &lt;button id="submit"&gt;Submit&lt;/button&gt;  
+       &lt;/div&gt;           
+              </code></pre>
+        </div>
+
+        <div class="center"> 
+            <pre class="language-css">                    
+<code>Css Code
+
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");  
+* {  
+ box-sizing: border-box;  
+}  
+body {  
+ background-color: #b8c6db;  
+ background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 100%);  
+ font-family: "Poppins", sans-serif;  
+ display: flex;  
+ align-items: center;  
+ justify-content: center;  
+ height: 100vh;  
+ overflow: hidden;  
+ margin: 0;  
+}  
+.quiz-container {  
+ background-color: #fff;  
+ border-radius: 10px;  
+ box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);  
+ width: 600px;  
+ max-width: 95vw;  
+ overflow: hidden;  
+}  
+.quiz-header {  
+ padding: 4rem;  
+}  
+h2 {  
+ padding: 1rem;  
+ text-align: center;  
+ margin: 0;  
+}  
+ul {  
+ list-style-type: none;  
+ padding: 0;  
+}  
+ul li {  
+ font-size: 1.2rem;  
+ margin: 1rem 0;  
+}  
+ul li label {  
+ cursor: pointer;  
+}  
+button {  
+ background-color: #8e44ad;  
+ color: #fff;  
+ border: none;  
+ display: block;  
+ width: 100%;  
+ cursor: pointer;  
+ font-size: 1.1rem;  
+ font-family: inherit;  
+ padding: 1.3rem;  
+}  
+button:hover {  
+ background-color: #732d91;  
+}  
+button:focus {  
+ outline: none;  
+ background-color: #5e3370;  
+}       
+        </code></pre>
+        </div> 
+        <div class="right">
+            <pre class="language-javascript"> 
+        <code>javascript Code 
+        
+        
+            const quizData = [  
+            {  
+             question: "Which language runs in a web browser?",  
+             a: "Java",  
+             b: "C",  
+             c: "Python",  
+             d: "JavaScript",  
+             correct: "d",  
+            },   
+            {  
+             question: "What does CSS stand for?",  
+             a: "Central Style Sheets",  
+             b: "Cascading Style Sheets",  
+             c: "Cascading Simple Sheets",  
+             d: "Cars SUVs Sailboats",  
+             correct: "b",  
+            },  
+            {     
+             question: "What does HTML stand for?",  
+             a: "Hypertext Markup Language",  
+             b: "Hypertext Markdown Language",  
+             c: "Hyperloop Machine Language",  
+             d: "Helicopters Terminals Motorboats Lamborginis",  
+             correct: "a",  
+            },    
+            {  
+             question: "What year was JavaScript launched?",  
+             a: "1996",  
+             b: "1995",  
+             c: "1994",  
+             d: "none of the above",  
+             correct: "b",  
+            },  
+           ];  
+           const quiz = document.getElementById("quiz");             
+           const answerElements = document.querySelectorAll(".answer");   
+           const questionElement = document.getElementById("question");  
+           const a_text = document.getElementById("a_text");                    
+           const b_text = document.getElementById("b_text");                    
+           const c_text = document.getElementById("c_text");  
+           const d_text = document.getElementById("d_text");  
+           const submitButton = document.getElementById("submit");  
+           let currentQuiz = 0;                        
+           let score = 0;                                    
+           const deselectAnswers = () => {  
+            answerElements.forEach( (answer) => (answer.checked = false));            
+           };                                       
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+           const getSelected = () => {   
+            let answer;                                              
+            answerElements.forEach((answerElement) => {  
+             if (answerElement.checked) answer = answerElement.id;  
+            });  
+            return answer;  
+           };  
+           const loadQuiz = () => {  
+            deselectAnswers();   
+            const currentQuizData = quizData[currentQuiz];  
+            questionElement.innerText = currentQuizData.question;  
+            a_text.innerText = currentQuizData.a;  
+            b_text.innerText = currentQuizData.b;  
+            c_text.innerText = currentQuizData.c;  
+            d_text.innerText = currentQuizData.d;  
+           };  
+           loadQuiz();  
+           submitButton.addEventListener("click", () => {  
+            const answer = getSelected();  
+            if (answer) {  
+             if (answer === quizData[currentQuiz].correct) score++;  
+             currentQuiz++;  
+             if (currentQuiz &lt; quizData.length) loadQuiz();  
+             else {  
+              quiz.innerHTML = `  
+                 <h2>You answered ${score}/${quizData.length} questions correctly</h2>  
+                 <button onclick="history.go(0)">Play Again</button>  
+               ` // location.reload() won't work in CodePen for security reasons;  
+             }  
+            }  
+           });        
+                                           
+            </code></pre>
+            </div> 
+    </div> 
+
+    <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+        <h1 class="sm:text-2xl text-2xl font-medium title-font my-6 text-white"> You Can Copy Above Code By Simply Click On Copy Button.</h1>
+        <div class="h-1 w-48  bg-indigo-500 rounded"></div> 
+      </div>
+
+      <div class="change-layout">Change Layout</div>      
+      <div class="container view2">
+          <div class="coder view2">
+              <div class="code-editor htmlCoder">
+                  <div class="code-type">HTML</div>
+                  <div class="code html" id="html"></div>
+              </div>
+              <div class="code-editor cssCoder">
+                  <div class="code-type">CSS</div>
+                  <div class="code css" id="css"></div>
+              </div>
+              <div class="code-editor jsCoder">
+                  <div class="code-type">JS</div>
+                  <div class="code js" id="javascript"></div>
+              </div>
+          </div>
+          <div class="output">
+              <iframe src="" class="virtual-iframe" frameborder="0"></iframe>
+          </div>
+      </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <script src="./static/js/app.js"></script>
+
+    <script src="proj-06.js"></script>
+</body>
+</html>

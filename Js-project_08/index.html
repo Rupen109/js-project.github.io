@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery Filter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="prism.css">
+    <script src="https://cdn.tailwindcss.com"></script>               
+    <script src="prism.js"></script>
+</head>
+<body>
+    
+    <section class="text-gray-600 body-font">           
+        <div class="px-5 py-24 ">
+          <div class="text-center mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-white mb-4">Image Filter  USING HTML,CSS AND JS</h1>
+            <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-white">See below video and try that code in pen.</p>
+          </div>   
+        </div>      
+    </section>
+
+    <div class="proj-08"> 
+        <div class="left">
+            <pre class="language-html"> 
+    <code>html code
+
+        &lt;section class="gallery"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="gallery-filter"&gt;
+                    &lt;span class="filter-item active" data-filter="all"&gt;All&lt;/span&gt;
+                    &lt;span class="filter-item" data-filter="shoe"&gt;Shoe&lt;/span&gt;
+                    &lt;span class="filter-item" data-filter="headphone"&gt;Headphone&lt;/span&gt;
+                    &lt;span class="filter-item" data-filter="camera"&gt;Camera&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="gallery-item shoe"&gt;
+                    &lt;div class="gallery-item-inner"&gt;
+                        &lt;img src="https://i.postimg.cc/7PJ4yYHh/revolt-164-6w-VEHf-I-unsplash.jpg" alt="shoe"&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="gallery-item headphone"&gt;
+                    &lt;div class="gallery-item-inner"&gt;
+                        &lt;img src="https://i.postimg.cc/zf7MT4q9/istockphoto-1289318271-170667a.jpg" alt="headphone"&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            
+                &lt;div class="gallery-item camera"&gt;
+                    &lt;div class="gallery-item-inner"&gt;
+                        &lt;img src="https://i.postimg.cc/vZ7QQdMP/nordwood-themes-F3-Dde-9thd8-unsplash.jpg" alt="camera"&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            
+                &lt;div class="gallery-item headphone"&gt;
+                    &lt;div class="gallery-item-inner"&gt;
+                        &lt;img src="https://i.postimg.cc/3xTY15HR/c-d-x-PDX-a-82obo-unsplash.jpg" alt="headphone"&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+               
+                &lt;div class="gallery-item camera"&gt;
+                    &lt;div class="gallery-item-inner"&gt;
+                        &lt;img src="https://i.postimg.cc/PrYL89TD/patrick-dozk-Vh-Dyvh-Q-unsplash.jpg" alt="camera"&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+             
+                &lt;div class="gallery-item headphone"&gt;
+                    &lt;div class="gallery-item-inner"&gt;
+    &lt;img src="https://i.postimg.cc/PqYyN2Nr/ervo-rocks-Zam8-Tv-Eg-N5o-unsplash.jpg" alt="headphone3"&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;              
+              </code></pre>
+        </div>
+
+        <div class="center"> 
+            <pre class="language-css">                    
+<code>Css Code
+
+    body{
+        line-height: 1.5;
+        font-family: sans-serif;
+    }
+    *{
+        margin:0;
+        box-sizing: border-box;
+    }
+    .container{
+        max-width: 1170px;
+        margin:auto;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    img{
+        max-width: 100%;
+        vertical-align: middle;
+    }
+    /*.gallery*/
+    .gallery{
+        width: 100%;
+        display: block;
+        min-height: 100vh;
+        background-color: black;
+        padding: 100px 0;
+    }
+    .gallery .gallery-filter{
+        padding: 0 15px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .gallery .gallery-filter .filter-item{
+        color: #ffffff;
+        font-size: 18px;
+        text-transform: uppercase;
+        display: inline-block;
+        margin:0 10px;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        line-height: 1.2;
+        transition: all 0.3s ease;
+    }
+    .gallery .gallery-filter .filter-item.active{
+        color: #ff9800;
+        border-color : #ff9800;
+    }
+    .gallery .gallery-item{
+        width: calc(100% / 3);
+        padding: 15px;
+    }
+    .gallery .gallery-item-inner img{
+        width: 100%;
+    }
+    .gallery .gallery-item.show{
+        animation: fadeIn 0.5s ease;
+    }
+    @keyframes fadeIn{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    .gallery .gallery-item.hide{
+        display: none;
+    }
+    
+    /*responsive*/
+    @media(max-width: 991px){
+        .gallery .gallery-item{
+            width: 50%;
+        }
+    }
+    @media(max-width: 767px){
+        .gallery .gallery-item{
+            width: 100%;
+        }	
+        .gallery .gallery-filter .filter-item{
+            margin-bottom: 10px;
+        }
+    } 
+        </code></pre>
+        </div> 
+        <div class="right">
+            <pre class="language-javascript"> 
+        <code>javascript Code 
+        
+        
+            const filterContainer = document.querySelector(".gallery-filter"),
+            galleryItems = document.querySelectorAll(".gallery-item");
+                                                                                                                                                                                                    
+            filterContainer.addEventListener("click", (event) =>{
+              if(event.target.classList.contains("filter-item")){
+                   // deactivate existing active 'filter-item'
+                   filterContainer.querySelector(".active").classList.remove("active"); 
+                   // activate new 'filter-item'           
+                   event.target.classList.add("active");                                         
+           
+                   const filterValue = event.target.getAttribute("data-filter");                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                   galleryItems.forEach((item) =>{ 
+                  if(item.classList.contains(filterValue) || filterValue === 'all'){
+                      item.classList.remove("hide");                                                                                                                                                                                                                                                                 
+                       item.classList.add("show");                                                                                                                                                                                                                    
+                  }                                    
+                  else{
+                      item.classList.remove("show");                                                    
+                      item.classList.add("hide");                        
+                  }                               
+                   });
+              }
+            });                      
+            </code></pre>
+            </div> 
+    </div> 
+
+    <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+        <h1 class="sm:text-2xl text-2xl font-medium title-font my-6 text-white"> You Can Copy Above Code By Simply Click On Copy Button.</h1>
+        <div class="h-1 w-48  bg-indigo-500 rounded"></div> 
+      </div>
+
+      <div class="change-layout">Change Layout</div>      
+      <div class="container view2">
+          <div class="coder view2">
+              <div class="code-editor htmlCoder">
+                  <div class="code-type">HTML</div>
+                  <div class="code html" id="html"></div>
+              </div>
+              <div class="code-editor cssCoder">
+                  <div class="code-type">CSS</div>
+                  <div class="code css" id="css"></div>
+              </div>
+              <div class="code-editor jsCoder">
+                  <div class="code-type">JS</div>
+                  <div class="code js" id="javascript"></div>
+              </div>
+          </div>
+          <div class="output">
+              <iframe src="" class="virtual-iframe" frameborder="0"></iframe>
+          </div>
+      </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <script src="./static/js/app.js"></script>
+  
+    <script src="proj-08.js"></script>
+</body>
+</html>

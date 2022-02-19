@@ -1,49 +1,12 @@
- &lt;section class="gallery"&gt;
-        &lt;div class="container"&gt;
-            &lt;div class="row"&gt;
-                &lt;div class="gallery-filter"&gt;
-                    &lt;span class="filter-item active" data-filter="all"&gt;All&lt;/span&gt;
-                    &lt;span class="filter-item" data-filter="shoe"&gt;Shoe&lt;/span&gt;
-                    &lt;span class="filter-item" data-filter="headphone"&gt;Headphone&lt;/span&gt;
-                    &lt;span class="filter-item" data-filter="camera"&gt;Camera&lt;/span&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="row"&gt;
-                &lt;div class="gallery-item shoe"&gt;
-                    &lt;div class="gallery-item-inner"&gt;
-                        &lt;img src="https://i.postimg.cc/7PJ4yYHh/revolt-164-6w-VEHf-I-unsplash.jpg" alt="shoe"&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-
-                &lt;div class="gallery-item headphone"&gt;
-                    &lt;div class="gallery-item-inner"&gt;
-                        &lt;img src="https://i.postimg.cc/zf7MT4q9/istockphoto-1289318271-170667a.jpg" alt="headphone"&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            
-                &lt;div class="gallery-item camera"&gt;
-                    &lt;div class="gallery-item-inner"&gt;
-                        &lt;img src="https://i.postimg.cc/vZ7QQdMP/nordwood-themes-F3-Dde-9thd8-unsplash.jpg" alt="camera"&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            
-                &lt;div class="gallery-item headphone"&gt;
-                    &lt;div class="gallery-item-inner"&gt;
-                        &lt;img src="https://i.postimg.cc/3xTY15HR/c-d-x-PDX-a-82obo-unsplash.jpg" alt="headphone"&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-               
-                &lt;div class="gallery-item camera"&gt;
-                    &lt;div class="gallery-item-inner"&gt;
-                        &lt;img src="https://i.postimg.cc/PrYL89TD/patrick-dozk-Vh-Dyvh-Q-unsplash.jpg" alt="camera"&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-             
-                &lt;div class="gallery-item headphone"&gt;
-                    &lt;div class="gallery-item-inner"&gt;
-    &lt;img src="https://i.postimg.cc/PqYyN2Nr/ervo-rocks-Zam8-Tv-Eg-N5o-unsplash.jpg" alt="headphone3"&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/section&gt;   
+&lt;div id="drag-container"&gt;  
+        &lt;div id="spin-container"&gt;  
+         &lt;!-- Add your images (or video) here --&gt;  
+         &lt;img href="google.com" src="https://images.pexels.com/photos/206395/pexels-photo-206395.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""&gt;  
+         &lt;img src="https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""&gt;  
+         &lt;img src="https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""&gt;  
+         &lt;img src="https://images.pexels.com/photos/1758144/pexels-photo-1758144.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""&gt;  
+         &lt;img src="https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""&gt;  
+         &lt;img src="https://images.pexels.com/photos/1462636/pexels-photo-1462636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""&gt;  
+        &lt;/div&gt;  
+        &lt;div id="ground"&gt;&lt;/div&gt;  
+       &lt;/div&gt;  

@@ -10,6 +10,19 @@
     bottom: 0;
 }
 
+/* bg for cards */
+#bg-color{
+    background-color: #E6E6FA;
+}
+
+#container{
+background-image: url('bg-laptop2.jpeg');
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
 /* image-slider */
 
    @-webkit-keyframes scroll {  
@@ -70,7 +83,7 @@
 
    .slider .slide-track {  
     -webkit-animation: scroll 40s linear infinite;  
-        animation: scroll 25s linear infinite;  
+        animation: scroll 20s linear infinite;  
     display: flex;  
     width: calc(150px * 14);  
    }  
@@ -93,9 +106,5 @@
     #myVideo{
         background-size: cover ;
      
-    }
-
-    .slider{
-        max-width: 400px;
     } 
-    }    
+}    

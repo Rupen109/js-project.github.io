@@ -1,5 +1,6 @@
  /* bg-video  */
 #myVideo {
+    
     width: 100vw;
     height: 100vh;
     object-fit: cover;
@@ -14,6 +15,23 @@
 #bg-color{
     background-color: #E6E6FA;
 }
+
+#wave{
+    /* background-image: url('polygon-scatter-haikei.png'); */
+    margin-top: 150px;
+    /* background-image: url('circle-scatter-haikei6.png'); */
+    background-image: url('wave.png');
+    /* background-image: url('blurry-gradient-haikei3.png'); */
+    /* background-image: url('blob-scene-haikei2.png'); */
+    /* background-image: url('wave11.svg'); */
+    /* background-repeat:repeat-x; */
+}
+
+
+
+/* #is{
+    background-image: url('wave10.png');
+} */
 
 #container{
 /* background-image: url('bg-laptop2.jpeg');

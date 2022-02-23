@@ -20,7 +20,10 @@
     /* background-image: url('wave.png'); */
    margin-top: 0px;
    scroll-behavior: smooth;
-    background-image: url('polygon-scatter-haikei5.png');
+    background-image: url('polygon-scatter-haikeifinal.png');
+    background-attachment: fixed;
+    
+    /* scroll-margin: 400px; */
     /* background-image: url('circle-scatter-haikei6.png'); */
     /* background-image: url('blurry-gradient-haikei3.png'); */
     /* background-image: url('blob-scene-haikei2.png'); */

@@ -2,6 +2,7 @@ window.onload = function () {
     for (var i = 0; i < document.getElementsByClassName("code").length; i++)
         document.getElementsByClassName("code")[i].style.height = document.querySelector(".code-editor").clientHeight - 40 + "px";
 
+
     let htmlEditor = ace.edit("html");
     htmlEditor.session.setMode("ace/mode/html");
     htmlEditor.setTheme("ace/theme/nord_dark");
@@ -75,6 +76,7 @@ window.onload = function () {
         cssEditor.resize();
         jsEditor.resize();
     })
+   
 
     let layout = 0;
 
@@ -117,3 +119,4 @@ window.onload = function () {
         }
     }
 }
+

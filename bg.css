@@ -19,7 +19,7 @@
 #wave{
     /* background-image: url('wave.png'); */
    margin-top: 0px;
-   scroll-behavior: smooth;
+   /* scroll-behavior: smooth; */
     background-image: url('polygon-scatter-haikeifinal.png');
     background-attachment: fixed;
     
@@ -155,7 +155,6 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
    }
 
 /* footer design  */
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
 
 #foot{
@@ -170,7 +169,7 @@ margin-top: -170px;
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
-	font: bold 16px sans-serif;
+	font: bold 16px ;
 	padding: 55px 50px;
 }
 
@@ -191,7 +190,7 @@ margin-top: -170px;
 
 .footer-distributed h3{
 	color:  #000000;
-	font: normal 36px 'Open Sans', cursive;
+	/* font: normal 36px 'Open Sans', cursive; */
 	margin: 0;
 }
 
@@ -202,7 +201,7 @@ margin-top: -170px;
 /* Footer links */
 
 .footer-distributed .footer-links{
-	color:  #ffffff;
+	color:  #000000;
 	margin: 20px 0 12px;
 	padding: 0;
 }
@@ -226,6 +225,7 @@ margin-top: -170px;
 
 .footer-distributed .footer-center{
 	width: 35%;
+    color: #000000;
 }
 
 .footer-distributed .footer-center i{
@@ -248,7 +248,7 @@ margin-top: -170px;
 
 .footer-distributed .footer-center p{
 	display: inline-block;
-	color: #ffffff;
+	color: #000000;
   font-weight:400;
 	vertical-align: middle;
 	margin:0;
@@ -288,11 +288,13 @@ margin-top: -170px;
 
 .footer-distributed .footer-company-about{
 	line-height: 20px;
-	color:  #92999f;
-	font-size: 13px;
+	color:  #000000;
+	font-size: 20px;
 	font-weight: normal;
 	margin: 0;
 }
+
+
 
 .footer-distributed .footer-company-about span{
 	display: block;
@@ -313,12 +315,10 @@ margin-top: -170px;
 	cursor: pointer;
 	background-color:  #33383b;
 	border-radius: 2px;
-
 	font-size: 20px;
 	color: #ffffff;
 	text-align: center;
 	line-height: 35px;
-
 	margin-right: 3px;
 	margin-bottom: 5px;
 }
@@ -345,10 +345,8 @@ margin-top: -170px;
 }
 
 
-
 @media only screen and(max-width:500px) {
     #myVideo{
         background-size: cover ;
-     
     } 
 }    

@@ -27,12 +27,12 @@
     <code>html code
 
         &lt;ul class="nav nav-pills"&gt;  
-        &lt;li&gt;&lt;a target='_blank' href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.co.uk/%3Fgws_rd%3Dssl" class="colorfix"&gt;&lt;button class="btn" role="button"&gt;Sign in&lt;/button&gt;&lt;/a&gt;&lt;/li&gt;  
+        &lt;li&gt;&lt;a href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.co.uk/%3Fgws_rd%3Dssl" class="colorfix"&gt;&lt;button class="btn" role="button"&gt;Sign in&lt;/button&gt;&lt;/a&gt;&lt;/li&gt;  
         &lt;li&gt;  
-         &lt;a target='_blank' title="Google apps" class="firstsbuttons" href="#"&gt;&lt;img class="quad" src="#" height="22" width="22"&gt;&lt;/a&gt;  
+         &lt;a  title="Google apps" class="firstsbuttons" href="#"&gt;&lt;img class="quad" src="#" height="22" width="22"&gt;&lt;/a&gt;  
         &lt;/li&gt;  
-        &lt;li&gt;&lt;a target='_blank' class="firstsbuttons" href="#"&gt;Images&lt;/a&gt;&lt;/li&gt;  
-        &lt;li&gt;&lt;a target='_blank' class="firstsbuttons" href="https://mail.google.com/mail/?tab=wm"&gt;Gmail&lt;/a&gt;&lt;/li&gt;  
+        &lt;li&gt;&lt;a  class="firstsbuttons" href="#"&gt;Images&lt;/a&gt;&lt;/li&gt;  
+        &lt;li&gt;&lt;a  class="firstsbuttons" href="https://mail.google.com/mail/?tab=wm"&gt;Gmail&lt;/a&gt;&lt;/li&gt;  
        &lt;/ul&gt;  
        &lt;div class="page"&gt;  
         &lt;img class="logo" src="https://www.google.it/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"&gt;  
@@ -41,7 +41,7 @@
          &lt;div class="button left"&gt;Google Search&lt;/div&gt;  
          &lt;div class="button right"&gt;I'm Feeling Lucky&lt;/div&gt;  
         &lt;/div&gt;  
-       &lt;/div&gt;   
+       &lt;/div&gt;  
        &lt;footer class="nav nav-tabs"&gt;  
         &lt;ul class="bottomone rightone"&gt;  
          &lt;li&gt;&lt;a target="blank" href="#"&gt;Settings&lt;/a&gt;&lt;/li&gt;  
@@ -53,7 +53,7 @@
          &lt;li&gt;&lt;a target="blank" href="#"&gt;Business&lt;/a&gt;&lt;/li&gt;  
          &lt;li&gt;&lt;a target="blank" href="#"&gt;Advertising&lt;/a&gt;&lt;/li&gt;  
         &lt;/ul&gt;  
-       &lt;/footer&gt;           
+       &lt;/footer&gt;       
               </code></pre>
         </div>
 
@@ -205,12 +205,13 @@
         
 $(document).ready(function() {  
     var gsearch = function() {  
-     var url = 'https://www.google.com/search?q=' + document.getElementById('searchme').value;  
-     window.open(url, 'google');  
+     var url = 'https://www.google.com/search?q=' + document.getElementById('searchme').value;
+     window.location.href=url;
     };  
     var glucky = function() {  
      var url = 'https://www.google.com/search?q=' + document.getElementById('searchme').value + '&btnI';  
      window.open(url, 'google');  
+    
     };  
     $(".left").click(gsearch);  
     $(".right").click(glucky);  
@@ -219,7 +220,8 @@ $(document).ready(function() {
       gsearch();  
      }  
     });  
-   });            
+   });  
+         
         </code></pre>
         </div> 
     </div>

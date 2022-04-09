@@ -8,7 +8,6 @@
     width: 80px;
     position: relative;
     border-radius: 50%;
-
     margin-top: -12px;
 }
 
@@ -34,9 +33,7 @@
 }
 
 #wave{
-    /* background-image: url('wave.png'); */
    margin-top: 0px;
-   /* scroll-behavior: smooth; */
     background-image: url('imgs/Untitle4.png');
     background-attachment: fixed;
     background-size: 105%;
@@ -65,9 +62,7 @@
     margin-right: -20px;
 }
 
-/* #is{
-    background-image: url('wave10.png');
-} */
+
 
 #container{
 /* background-image: url('bg-laptop2.jpeg');
@@ -173,8 +168,6 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
    }
 
 /* footer design  */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
-
 #foot{
 margin-top: -170px;
 }
@@ -368,3 +361,17 @@ margin-top: -170px;
         background-size: cover ;
     } 
 }    
+
+@media  (max-width:450px) {
+    .navbar{
+        /* height: 70px; */
+    }
+}
+
+@media  (max-width:450px) {
+    #wave{
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+}

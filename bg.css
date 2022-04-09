@@ -5,13 +5,11 @@
 }
 
 .logo-image{
-    width: 100px;
-    height: 100px;
+    width: 80px;
     position: relative;
     border-radius: 50%;
-    /* overflow: hidden; */
+
     margin-top: -12px;
-    /* margin-left: -100px; */
 }
 
 

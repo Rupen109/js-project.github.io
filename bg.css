@@ -2,6 +2,7 @@
 
 *{
     font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .logo-image{
@@ -35,6 +36,7 @@
 #wave{
    margin-top: 0px;
     background-image: url('imgs/Untitle4.png');
+    scroll-behavior: smooth;
     background-attachment: fixed;
     background-size: 105%;
     
